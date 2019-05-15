@@ -5,7 +5,7 @@ services:
     ports:
       - "9200:9200"
     volumes:
-      - ./elasticsearch:/usr/share/elasticsearch/data/elasticsearch
+      - ./elasticsearch/elasticsearch:/usr/share/elasticsearch/data/elasticsearch
 
   couchdb:
     image: couchdb
@@ -15,4 +15,4 @@ services:
       COUCHDB_USER: admin
       COUCHDB_PASSWORD: admin
     volumes:
-      - ./couchdb:/opt/couchdb/data
+      - ./couchdb/couchdb:/opt/couchdb/data
